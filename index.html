@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://kit.fontawesome.com/6418fbc3a7.js" crossorigin="anonymous"></script>
+  <title>Cajero Automático</title>
+</head>
+<body>
+  <div id="app">
+    <img id="cajeroImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/BBVA_2019.svg/2560px-BBVA_2019.svg.png" alt="Cajero Automático">
+    <h1>Cajero Automático</h1>
+    <span id="usuarioIcon"><i class="fa-solid fa-circle-user"></i></span>
+    <div id="inicioSesion">
+        <select id="cuentasDropdown">
+            <option value="0">Mali</option>
+            <option value="1">Gera</option>
+            <option value="2">Maui</option>
+        </select>
+        <input type="password" id="passwordInput" placeholder="Ingrese contraseña">
+        <button onclick="login()">Ingresar</button>
+    </div>
+
+    <div id="nombreUsuario"></div>
+    <div id="operaciones" class="hidden">
+        <button onclick="consultarSaldo()">Consultar Saldo</button>
+        <button onclick="ingresarMonto()">Ingresar Monto</button>
+        <button onclick="retirarMonto()">Retirar Monto</button>
+
+        <div>
+            <button id="cerrarSesion" onclick="cerrarSesion()">Cerrar Sesión</button>
+        </div>
+    </div>
+        <div id="resultado" class="hidden"></div>
+    </div>
+  <script src="cajero.js"></script>
+
+</body>
+</html>
+
+
